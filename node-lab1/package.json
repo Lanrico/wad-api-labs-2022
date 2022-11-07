@@ -4,13 +4,20 @@
   "description": "node lab 1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec npm start"
   },
   "author": "Guanlan Ji",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.1.0",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^8.27.0",
+    "eslint-plugin-react": "^7.31.10",
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }
