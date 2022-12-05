@@ -59,10 +59,7 @@ router.post('/:userName/favourites', asyncHandler(async (req, res) => {
     const newFavourite = req.body.id;
     const userName = req.params.userName;
     const movie = await movieModel.findByMovieDBId(newFavourite);
-    const user = await User.findByUserName(userName);
-    console.log(user.favourites[0])
-    console.log(user.favourites.includes(movie._id))
-    
+    const user = await User.findByUserName(userName);  
     if (!user.favourites.includes(movie._id)){
         await user.favourites.push(movie._id);
         await user.save();
