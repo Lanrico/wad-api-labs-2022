@@ -20,10 +20,6 @@ async function loadUsers() {
   }
 }
 
-if (process.env.SEED_DB) {
-  loadUsers();
-}
-
 // deletes all user documents in collection and inserts test data
 async function loadGenres() {
   console.log('load genre Data');
